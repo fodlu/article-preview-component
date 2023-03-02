@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.social {
+  display: none;
+}
+
+.social.active {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(214, 17%, 51%);
+  padding: 10px 30px;
+  border-radius: 8px;
+  position: absolute;
+  right: -93px;
+  bottom: 86px;
+}
+
+.social span {
+  color: hsl(212, 23%, 69%);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.social::before {
+  content: " ";
+  background-color: hsl(214, 17%, 51%);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: -8px;
+  left: 145px;
+  transform: rotate(45deg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+}
+
+article {
+  /* display: flex;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  max-width: 50%;
+  border-radius: 5px;
+  /* overflow: hidden; */
+  background-color: white;
+  box-shadow: 0 0 3px hsl(214, 17%, 51%);
+  position: relative;
+}
+
+article .drawer {
+  width: 100%;
+  height: 100%;
+}
+
+article .content {
+  padding: 2rem;
+  color: hsl(217, 19%, 35%);
+}
+
+article .content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+article p {
+  color: hsl(212, 23%, 69%);
+  font-size: 0.8rem;
+}
+
+article .content .author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+article .content .author .detail {
+  display: flex;
+  align-items: center;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: hsl(210, 46%, 95%);
+}
+
+article .content .author .detail img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+h5 {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    display: block;
+    background-color: white;
+  }
+
+  article {
+    display: block;
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  article .drawer {
+    height: 280px;
+    display: block;
+  }
+
+  .social::before {
+    display: none;
+  }
+
+  .social.active {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(214, 17%, 51%);
+    padding: 10px 30px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 2s all ease-in-out;
+  }
+}
